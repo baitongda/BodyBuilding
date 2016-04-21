@@ -6,7 +6,7 @@
 安装express
   我们安装4.0，这里有个需要注意的问题在4.x版本express 已经把命令行工具分离出来 （链接https://github.com/expressjs/generator）
   现在全局安装只需要安装这个命令行工具就可以，指令如下：
- <p style="height:40px;background:#eee;line-height:40px;"> npm install -g express-generator</p>
+  <pre><code>npm install -g express-generator</code></pre>
 <h3>2.创建项目</h3>
 生成一个express项目: 
   $ express nodeApp
