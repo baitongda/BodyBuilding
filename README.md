@@ -13,6 +13,7 @@
   $ cd nodeApp && npm install
   安装一些将来要用的模块
   $ npm install mongoose underscore moment supervisor bcryptjs --save
-  
+  测试图片
+  ![](https://github.com/sun124361111/BodyBuilding/blob/master/image/plmm.jpg)
   
   
