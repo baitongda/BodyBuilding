@@ -1,0 +1,40 @@
+nav.navbar.navbar-default.navbar-fixed-top
+	.container
+		.navbar-header
+			a.navbar-brand(href='#')
+				img(alt='Brand',src='/images/google.png')
+		.navbar-collapse.collapse
+			ul.nav.navbar-nav
+				li.nav_index.active: a(href='#') 首页
+				li.nav_video: a(href='#') 视频专区
+				li.dropdown.nav_bbs
+					a.dropdown-toggle(href='#',data-toggle='dropdown') 论坛
+						span.caret
+					ul.dropdown-menu
+						li: a(href='/bbs') 所有帖子
+						li: a(href='/bbs') 精品区
+						li: a(href='/bbs') 我的
+			form.navbar-form.navbar-left
+				.form-group
+					.input-group
+						input.form-control(type='text',placeholder='Search')
+						span.input-group-btn
+							button.btn.btn-default(type='submit') Go!
+			- if (user)
+				.header_user.pull-right
+					a.user_header(href='/user/#{user.name}')
+						img.img-circle(src='/images/user_header.png',alt='header')
+					a(href='/user/#{user.name}') #{user.name}
+					span &nbsp;/&nbsp;
+					a(href='/user/logout') Logout
+					.user_info_wrap
+						.user_info 用户信息
+							span.triangle
+
+			- else
+				.header_user.pull-right
+					a.user_header(href='#')
+						img.img-circle(src='/images/google.png',alt='default_header')
+					a(href='#',data-target='#signinModal',data-toggle='modal') SignIn
+					span &nbsp;/&nbsp;
+					a(href='#',data-target='#signupModal',data-toggle='modal') SignUp

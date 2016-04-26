@@ -1,0 +1,27 @@
+//- modal
+.modal.fade#signupModal(tabindex='-1',role='dialog',aria-labelledby="myModalLabel")
+	.modal-dialog(role='document')
+		.modal-content
+			form.form-horizontal#signupForm(method='post',action='admin/signup')
+				.modal-header 用户注册
+					button.close(type='button',data-dismiss='modal',aria-label='Close'): span(aria-hidden='true') &times;
+				.modal-body
+					.form-group
+						label.control-label.col-sm-2(for='username_r') Username
+						.col-sm-10
+							input.form-control#username_r(type='text',name='user[name]',placeholder='Username')
+					.form-group
+						label.control-label.col-sm-2(for='password_r') Password
+						.col-sm-10
+							input.form-control#password_r(type='password',name='user[password]',placeholder='Password')
+					.form-group
+						label.control-label.col-sm-2(for='conPassword') Password
+						.col-sm-10
+							input.form-control#conPassword(type='password',name='user[conPassword]',placeholder='Password Again')
+				.modal-footer
+					.form-group
+						.col-sm-offset-2.col-sm-2
+							button.btn.btn-default(type='button',data-dismiss='modal') Cancel
+						.col-sm-2
+							button.btn.btn-success(type='submit') SingUp
+

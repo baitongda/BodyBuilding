@@ -1,0 +1,27 @@
+#signinModal label.error,#signupModal label.error{
+	color: #f00;
+	margin-top: 2px;
+	font-weight: 500;
+}
+nav .header_user{
+	height: 50px;
+	line-height: 50px;
+}
+nav .header_user a{
+	color: #00B7FF;
+}
+#signinModal .col-md-10,#signupModal .col-md-10{
+	position: relative;
+}
+
+span.username_ok{
+	display: inline-block;
+	display: none;
+	width: 15px;
+	height: 12px;
+	background: url('../images/username_ok.png') no-repeat 0 0;
+	position: absolute;
+    right: 24px;
+    top: 12px;
+}
+}

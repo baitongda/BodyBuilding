@@ -1,0 +1,25 @@
+//- modal
+.modal.fade#signinModal(tabindex='-1',role='dialog',aria-labelledby="myModalLabel")
+	.modal-dialog(role='document')
+		.modal-content
+			form.form-horizontal#signinForm(method='POST',action='admin/signin')
+				.modal-header 用户登录
+					button.close(type='button',data-dismiss='modal',aria-label='Close'): span(aria-hidden='true') &times;
+				.modal-body
+					.form-group
+						label.control-label.col-sm-2(for='username') Username
+						.col-sm-10
+							input.form-control#username(type='text',name='user[name]',placeholder='Username',aria-describedby='signin_name_right')
+							span.username_ok
+					.form-group
+						label.control-label.col-sm-2(for='password') Password
+						.col-sm-10
+							input.form-control#password(type='password',name='user[password]',placeholder='Password')
+							//- span.username_ok
+				.modal-footer
+					.form-group
+						.col-sm-offset-2.col-sm-2
+							button.btn.btn-default(type='button',data-dismiss='modal') Cancel
+						.col-sm-2
+							button.btn.btn-success(type='submit') SignIn
+

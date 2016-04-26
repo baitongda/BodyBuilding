@@ -1,8 +1,106 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+	padding-top: 50px;
+}
+#footer{
+	width: 100%;
+	padding: 25px 50px 10px;
+	background: #ddd;
+	padding-left: 50px;
+	position: fixed;
+	bottom: 0;
 }
 
-a {
-  color: #00B7FF;
+nav .user_header .img-circle{
+	
+	width: 30px;
+	height: 30px;
+	background: #ccc;
+	display: inline-block;
+	margin-right: 10px;
+}
+nav .user_header .img-circle:hover{
+	box-shadow: 0 0 8px rgba(0,0,0,.9);
+}
+nav .user_header:hover~.user_info_wrap{
+	display: block;
+}
+nav .user_info_wrap:hover{
+	display: block;
+}
+nav .user_info_wrap{
+	display: none;
+	position: absolute;
+	padding-top: 20px;
+	width: 200px;
+	height: 220px;
+	top:31px;
+}
+nav .header_user{
+	position: relative;
+	color: #dadada;
+}
+nav .header_user .user_info{
+	box-shadow: 0 0 8px;
+	left: -30px;
+	height: 100%;
+	border-radius: 10px;
+	background: #fff;
+	border: 1px solid #bbb;
+	position: relative;
+}
+nav .header_user .user_info::after{
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #bbb;
+	left: 40px;
+	top: -8px;
+}
+nav .header_user .user_info .triangle{
+	position: absolute;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #fff;
+	left: 40px;
+	top: -7px;
+	z-index: 9;
+}
+/* main body */
+.main_body {
+
+}
+#index_page_carousel{
+	width: 100%;
+	height: 410px;
+	overflow: hidden;
+}
+.carousel{
+	background: #ddd;
+}
+.carousel .item{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.carousel .carousel-inner{
+	width: 100%;
+	height: 100%;
+}
+.carousel .item img{
+	width: 100%;
+	height: 100%;
+}
+.carousel .item .carousel-caption_user{
+	position: absolute;
+	width: 100px;
+	padding: 20px 0;
+	text-align: center;
+	bottom: 100px;
 }
