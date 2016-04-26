@@ -27,4 +27,14 @@ var CommentSchema = new Schema({
 			default:Date.now()
 		}
     }
+});
+
+//关联表的pupulate方法
+Movie.findById(id,function (err,movie) {
+	Comment
+		.find({movie:id})
+	.populate('from','name')  //根据from字段的_id 来取得对应的name
+		.exec(function (err,comments) {
+			res.render({});
+		})
 })

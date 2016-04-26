@@ -5,3 +5,4 @@ exports.index = function(req, res) {
     	user:req.session.user
      });
 }
+/* */
