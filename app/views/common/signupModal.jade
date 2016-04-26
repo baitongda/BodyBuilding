@@ -2,7 +2,7 @@
 .modal.fade#signupModal(tabindex='-1',role='dialog',aria-labelledby="myModalLabel")
 	.modal-dialog(role='document')
 		.modal-content
-			form.form-horizontal#signupForm(method='post',action='admin/signup')
+			form.form-horizontal#signupForm(method='post',action='/signup')
 				.modal-header 用户注册
 					button.close(type='button',data-dismiss='modal',aria-label='Close'): span(aria-hidden='true') &times;
 				.modal-body
