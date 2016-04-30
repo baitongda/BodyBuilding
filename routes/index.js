@@ -14,10 +14,12 @@ router.use(function (req,res,next) {
 
 /* GET home page. */
 router.get('/', Index.index);
-
+router.get('/index', Index.index);
 
 /* User */
+router.post('/signin',User.signin);
 router.post('/signup',User.signup);
+router.get('/logout',User.logout);
 
 
 

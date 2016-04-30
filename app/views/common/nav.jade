@@ -5,7 +5,7 @@ nav.navbar.navbar-default.navbar-fixed-top
 				img(alt='Brand',src='/images/google.png')
 		.navbar-collapse.collapse
 			ul.nav.navbar-nav
-				li.nav_index.active: a(href='#') 首页
+				li.nav_index.active: a(href='/index') 首页
 				li.nav_video: a(href='#') 视频专区
 				li.dropdown.nav_bbs
 					a.dropdown-toggle(href='#',data-toggle='dropdown') 论坛
@@ -26,7 +26,7 @@ nav.navbar.navbar-default.navbar-fixed-top
 						img.img-circle(src='/images/user_header.png',alt='header')
 					a(href='/user/#{user.name}') #{user.name}
 					span &nbsp;/&nbsp;
-					a(href='/user/logout') Logout
+					a(href='/logout') Logout
 					.user_info_wrap
 						.user_info 用户信息
 							span.triangle

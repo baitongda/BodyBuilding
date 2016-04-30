@@ -35,6 +35,15 @@ block content
 					span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
 					span.sr-only Next
 		.col-md-4
+			.right-bar
+				.right-bar-head
+					p.right-bar-summary 近期最热
+				.right-bar-body
+					ul.right-bar-news
+						each item in news
+							li.right-bar-new
+								a(href='#{item.url}') #{item.title}
 			
 	script(src="/javascripts/jquery.validate.js",type='text/javascript')
 	script(src='/javascripts/user_validate.js',type='text/javascript')
+	script(src='/javascripts/right-bar.js',type='text/javascript')

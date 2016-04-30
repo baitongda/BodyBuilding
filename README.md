@@ -219,3 +219,68 @@ exports.signup = function (req,res) {
 	
 }
 ```
+#### 登录`app/controllers/user.js`
+```js
+exports.signin = function(req, res) {
+    var _user = req.body.user;
+    console.log(_user);
+    User.findOne({ name: _user.name }, function(err, user) {
+        if (err) return console.log(err);
+        if (!user) return res.render('error', {
+            message: '用户不存在!',
+            error: {status: '500',stack: 'retry!'}
+        });
+        user.comparePassword(_user.password, function(err,isMarch) {
+        	if (err) return console.log(err);
+            if (isMarch) {
+                req.session.user = _user;
+                res.redirect('/');
+            } else {
+                res.render('error', {
+                    message: '密码错误',
+                    error: {status: '500',stack: 'retry!'}
+                });
+            }
+        });
+    });
+};
+```js
+#### 登出`app/controllers/user.js`
+![](https://github.com/sun124361111/BodyBuilding/blob/master/public/images/4.jpg)
+```
+exports.logout = function(req, res) {
+	delete req.session.user;
+	res.redirect('../');  //返回调用它的请求目录, 而不是仅仅返回 '/' 根目录
+}
+```
+#### 消息轮播
+![](https://github.com/sun124361111/BodyBuilding/blob/master/public/images/5.jpg)
+``` js
+$(function() {
+    var bar = $('.right-bar-body'),
+        ulList = bar.children('ul'),
+        lis = ulList.children('li'),
+        NUM = 5,
+        during = 3000,
+        direction = 'top';
+    showNews(bar, ulList, lis, NUM, during, direction);
+    function showNews(parent, ulList, list, num, time, dir) {
+        var newList = list.clone(),
+        	index = 0;
+        ulList.css({ 'position': 'absolute', 'top': '0' });
+        newList.appendTo(ulList);
+        var timer = null;
+        timer = setInterval(function () {
+        	if(index <= 4){
+        		ulList.animate({top:-30*(index+1)+'px'},'slow');
+        		index++;
+        		if(index === 5){
+					ulList.animate({'top':'0'},0);  //不知道为什么用 .css() 方法没有起作用
+        			index= 0;
+        		}
+        	}
+        }, during);
+    }
+});
+```
+

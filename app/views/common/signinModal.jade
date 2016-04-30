@@ -2,7 +2,7 @@
 .modal.fade#signinModal(tabindex='-1',role='dialog',aria-labelledby="myModalLabel")
 	.modal-dialog(role='document')
 		.modal-content
-			form.form-horizontal#signinForm(method='POST',action='admin/signin')
+			form.form-horizontal#signinForm(method='POST',action='/signin')
 				.modal-header 用户登录
 					button.close(type='button',data-dismiss='modal',aria-label='Close'): span(aria-hidden='true') &times;
 				.modal-body

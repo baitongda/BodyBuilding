@@ -104,3 +104,39 @@ nav .header_user .user_info .triangle{
 	text-align: center;
 	bottom: 100px;
 }
+
+/* right bar */
+.right-bar{
+	width: 340px;
+	margin:0 auto;
+}
+.right-bar-head{
+	margin-top: 20px;
+	background: #F3F3F3;
+	font-size: 16px;
+	color:#eee;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 45px;
+	border-bottom: 1px solid #ddd;
+}
+.right-bar-body{
+	height:150px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+.right-bar-summary{
+	color:#f30;
+	font-size: 16px;
+
+}
+.right-bar-news li{
+	list-style-type: none;
+	padding:5px;
+}
+.right-bar-news li a{
+	color:#333;
+}
