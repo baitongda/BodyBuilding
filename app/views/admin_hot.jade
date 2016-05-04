@@ -1,0 +1,87 @@
+extends ./common/layout_admin
+append header
+	link(rel='stylesheet',href='/stylesheets/admin.css')
+block content
+	include ./common/admin_header
+	.container.admin-hot
+		.admin-hot-wrap
+			h3 热点管理
+			.row.hot-manager
+				.col-md-4
+					.input-group
+						input.form-control(type="text",placeholder="Search for...")
+						span.input-group-btn
+							button#serach.btn.btn-default(type="button") Go!
+				.col-md-5
+				.col-md-3
+					button.btn.btn-default.pull-right#add-hot(data-target='#hotForm',data-toggle='modal') 添加热点
+			table.table.table-hover
+				thead
+					th #
+					th 标题
+					th 地址
+					th 时间
+					th 添加人
+					th 操作
+				tbody
+					tr(data-id='fjf9alsdjkfasdfjalsjfd12384y')
+						td 1
+						td.hot-title 我是热点的标题	
+						td.hot-url http://www.baidu.com/p/123456http://www.baidu.com/p/123456http://www.baidu.com/p/123456http://www.baidu.com/p/123456
+						td.hot-date 2016-5-5
+						td.hot-user Sun.
+						td.admin-hot-handle
+							span: a.admin-user-edit(href="#",data-target='#hotForm',data-toggle='modal') 编辑
+							span: a.admin-user-delete 删除
+					
+			.admin-user-page.pull-right
+				nav
+					ul.pagination
+						li: a(href='#',aria-label='Previous'): span(aria-hidden='true') &laquo;
+						li.active: a(href='#') 1
+						li: a(href='#') 2
+						li: a(href='#') 3
+						li: a(href='#') 4
+						li: a(href='#') ...
+						li: a(href='#') 10
+						li: a(href='#',aria-label='Next'): span(aria-hidden='true') &raquo; 
+		
+	//- add hots modal
+	.modal.fade#hotForm(tabindex='-1',role='dialog',aria-labelledby="myModalLabel")
+		.modal-dialog(role='document')
+			.modal-content
+				form.form-horizontal#hotForm(method='POST',action='/signin')
+					.modal-header 
+						span.header-title 添加热点
+						button.close(type='button',data-dismiss='modal',aria-label='Close'): span(aria-hidden='true') &times;
+					.modal-body
+						.form-group
+							label.control-label.col-sm-2(for='hot-title') 标题
+							.col-sm-10
+								input.form-control#hot-title(type='text',name='hot[title]',placeholder='Title',aria-describedby='add_hot_right')
+						.form-group
+							label.control-label.col-sm-2(for='hot-url') 地址
+							.col-sm-10
+								input.form-control#hot-url(type='text',name='hot[url]',placeholder='Url',aria-describedby='add_hot_right')
+						.form-group
+							label.control-label.col-sm-2(for='hot-date') 时间
+							.col-sm-10
+								input.form-control#hot-date(type='text',name='hot[date]',placeholder='Date',aria-describedby='add_hot_right')
+						.form-group
+							label.control-label.col-sm-2(for='hot-admin') 添加人
+							.col-sm-10
+								select.form-control#hot-admin(type='select',name='hot[admin]',aria-describedby='add_hot_right')
+									option Sun.
+									option Ju.
+									option John.
+									option Papi酱
+					.modal-footer
+						.form-group
+							.col-sm-offset-2.col-sm-2
+								button.btn.btn-default(type='button',data-dismiss='modal') Cancel
+							.col-sm-2
+								button.btn.btn-success#add-hot(type='submit') Confirm	
+			
+
+	script(src='/javascripts/footer.js',type='text/javascript')
+	script(src='/javascripts/admin_hot.js',type='text/javascript')

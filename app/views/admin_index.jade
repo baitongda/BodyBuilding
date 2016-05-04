@@ -1,0 +1,58 @@
+extends ./common/layout_admin
+append header
+	link(rel='stylesheet',href='/stylesheets/admin.css')
+block content
+	header#header.header
+		.container
+			.header-left
+			.header-right
+				ul.header-nav
+					li: a(href="/admin") 首页
+					li(href='/admin/user') 用户管理
+					li: a(href="/admin/video") 视频管理
+					li.active.header-dropdown
+						a(href="#") 首页管理
+						ul.header-dropdown-menu
+							li.dropdown-menu-list: a(href='/admin/hot') 热点管理
+							li.dropdown-menu-list: a(href='/admin/news') 新闻管理
+							li.dropdown-menu-list: a(href='/admin/bbs') 论坛管理
+
+	.container.admin-user
+		
+	//- add user modal
+	.modal.fade#userForm(tabindex='-1',role='dialog',aria-labelledby="myModalLabel")
+		.modal-dialog(role='document')
+			.modal-content
+				form.form-horizontal#userForm(method='POST',action='/signin')
+					.modal-header 添加用户
+						button.close(type='button',data-dismiss='modal',aria-label='Close'): span(aria-hidden='true') &times;
+					.modal-body
+						.form-group
+							label.control-label.col-sm-2(for='username') 用户名
+							.col-sm-10
+								input.form-control#username(type='text',name='user[name]',placeholder='Username',aria-describedby='add_user_right')
+						.form-group
+							label.control-label.col-sm-2(for='username') 密码
+							.col-sm-10
+								input.form-control#password(type='text',name='user[password]',placeholder='Password',aria-describedby='add_user_right')
+						.form-group
+							label.control-label.col-sm-2(for='username') 手机号
+							.col-sm-10
+								input.form-control#phone(type='text',name='user[phone]',placeholder='Phone Number',aria-describedby='add_user_right')
+						.form-group
+							label.control-label.col-sm-2(for='root') 权限
+							.col-sm-10
+								select.form-control#root(type='text',name='user[root]',aria-describedby='signin_name_right')
+									option 超级管理员
+									option 管理员
+									option 普通用户
+										
+					.modal-footer
+						.form-group
+							.col-sm-offset-2.col-sm-2
+								button.btn.btn-default(type='button',data-dismiss='modal') Cancel
+							.col-sm-2
+								button.btn.btn-success(type='submit') Add	
+			
+
+	script(src='/javascripts/footer.js',type='text/javascript')

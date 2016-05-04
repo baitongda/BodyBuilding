@@ -1,0 +1,14 @@
+header#header.header
+		.container
+			.header-left
+			.header-right
+				ul.header-nav
+					li: a(href="/admin") 首页
+					li: a(href='/admin/user') 用户管理
+					li: a(href="/admin/video") 视频管理
+					li.header-dropdown
+						a(href="#") 首页管理
+						ul.header-dropdown-menu
+							li.dropdown-menu-list: a(href='/admin/hot') 热点管理
+							li.dropdown-menu-list: a(href='/admin/news') 新闻管理
+							li.dropdown-menu-list: a(href='/admin/bbs') 论坛管理

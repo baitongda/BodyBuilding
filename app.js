@@ -7,7 +7,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var mongoose = require('mongoose');
 //var moment = require('moment');
 mongoose.connect('mongodb://localhost/body');
@@ -42,6 +41,7 @@ app.use(session({
     }*/
 }));
 app.use('/', routes);
+
 //判断环境 (开发,测试,线上)
 if ('development' === app.get('env')) { //本地开发环境
     app.set('showStackError', true)  //打印错误信息

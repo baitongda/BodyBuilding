@@ -40,9 +40,56 @@ block content
 					p.right-bar-summary 近期最热
 				.right-bar-body
 					ul.right-bar-news
-						each item in news
+						each item in hots
 							li.right-bar-new
 								a(href='#{item.url}') #{item.title}
+		ul.col-md-8.news-model
+			each item in news
+				li
+					.news
+						.news-top
+							.col-md-8
+								.news-top-header.pull-left
+									a.news-top-name.pull-left(href="http://localhost:3000/user/admin")
+										img(src="/images/user_header.png",alt="")
+										span #{item.user}
+									span.news-top-date #{moment(item.date).format('YYYY-MM-DD')}
+							.news-top-right.pull-right
+								span.news-top-fork 赞
+									font.news-fork-num #{item.fork}
+								span.news-top-fav 收藏
+									font.news-fav-num #{item.fav}
+						.news-body
+							.news-head
+							.news-main
+								.col-md-4.news-left
+									a(href="#{item.url}"): img(src="#{item.image}")
+								.col-md-8.news-right
+									p.news-right-title
+										a(href="#{item.url}") #{item.title}
+									a.news-right-detail(href="#") #{item.content}
+			//- li
+			//- 	.news
+			//- 		.news-top
+			//- 			.col-md-8
+			//- 				.news-top-header.pull-left
+			//- 					a.news-top-name.pull-left(href="#")
+			//- 						img(src="/images/user_header.png",alt="")
+			//- 						span Sun.
+			//- 					span.news-top-date 2016.5.1
+			//- 			.news-top-right.pull-right
+			//- 				span.news-top-fork 赞
+			//- 				span.news-top-fav 收藏
+			//- 		.news-body
+			//- 			.news-head
+			//- 			.news-main
+			//- 				.col-md-4.news-left
+			//- 					a(href="#"): img(src="/images/news-1.jpg")
+			//- 				.col-md-8.news-right
+			//- 					p.news-right-title
+			//- 						a(href="#") 腰窝与性感无关？
+			//- 					a.news-right-detail(href="#") 腰窝是什么？腰窝是背部后面，臀部上方的脊柱两侧的两个略微凹下去的窝的，看起来特像小酒窝；美术界又称“圣涡”，是理想的人体模特的标志之一，特别是臀模，如果有腰窝那更是无数摄影师争抢的对象，其价值不言而愈，臀模有腰窝和没有腰窝的区别是非常大的；
+			
 			
 	script(src="/javascripts/jquery.validate.js",type='text/javascript')
 	script(src='/javascripts/user_validate.js',type='text/javascript')

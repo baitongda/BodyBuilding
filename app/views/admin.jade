@@ -1,0 +1,30 @@
+extends ./common/layout_admin
+append header
+	link(rel='stylesheet',href='/stylesheets/admin.css')
+block content
+	include ./common/admin_header
+						
+	.container.menu
+		.row
+			.col-md-4.menu-list-1
+				a(href='/admin/user')
+					.menu-wrap
+			.col-md-4.menu-list-2
+				a(href='/admin/video')
+					.menu-wrap
+			.col-md-4.menu-list-3
+				a(href='/admin/bbs')
+					.menu-wrap
+		.row
+			.col-md-4.menu-list-4
+				a(href='/admin/hot')
+					.menu-wrap
+			.col-md-4.menu-list-5
+				a(href='#/admin/news')
+					.menu-wrap
+			.col-md-4.menu-list-6
+				a(href='#')
+					.menu-wrap
+
+	script(src='/javascripts/footer.js',type='text/javascript')
+	script(src='/javascripts/admin_index.js',type='text/javascript')

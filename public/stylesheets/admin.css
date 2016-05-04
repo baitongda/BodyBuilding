@@ -1,0 +1,235 @@
+/* admin page */
+
+body {
+    padding-top: 0;
+}
+
+.header {
+    height: 85px;
+    background: #025CB7;
+}
+
+.header .container {
+    margin-top: 0;
+    height: 100%;
+}
+
+.header-left,
+.header-right {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.header-right {
+    position: relative;
+}
+
+.header-right ul.header-nav {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    height: 32px;
+    margin-bottom: 0;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.header-right ul.header-nav li {
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 90px;
+    background: #00f;
+    height: 100%;
+    margin-left: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #008acc;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+.header-right ul.header-nav li a {
+	width: 100%;
+	display: block;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right ul.header-nav li.active a {
+    color: #008acc;
+}
+
+.header-right ul.header-nav li.active {
+    background: #fff;
+    color: #008acc;
+}
+
+ul.header-nav .header-dropdown {
+    position: relative;
+}
+
+ul.header-nav .header-dropdown:hover ul.header-dropdown-menu {
+    display: block;
+}
+
+ul.header-dropdown-menu {
+	z-index: 1;
+    display: none;
+    width: 160px;
+    position: absolute;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    border: 1px solid rgba(0, 0, 0, .15);
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    overflow: hidden;
+    top: 30px;
+}
+ul.header-dropdown-menu a{
+		height: 26px;
+	line-height: 26px;
+}
+
+ul.header-dropdown-menu li.dropdown-menu-list {
+    background: #fff;
+    color: #333;
+    border-radius: 0;
+    width: 100%;
+    margin-left: 0;
+}
+
+ul.header-dropdown-menu li.dropdown-menu-list a {
+    color: #333!important;
+}
+
+ul.header-dropdown-menu li.dropdown-menu-list:hover {
+    background: #eee;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.row .menu-wrap {
+    width: 267px;
+    height: 171px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.row .menu-wrap:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.menu-list-1 .menu-wrap {
+    background: url('/images/admin-menu-1.png');
+}
+
+.menu-list-2 .menu-wrap {
+    background: url('/images/admin-menu-3.png');
+}
+
+.menu-list-3 .menu-wrap {
+    background: url('/images/admin-menu-6.png');
+}
+
+.menu-list-4 .menu-wrap {
+    background: url('/images/admin-menu-2.png');
+}
+
+.menu-list-5 .menu-wrap {
+    background: url('/images/admin-menu-4.png');
+}
+
+.menu-list-6 .menu-wrap {
+    background: url('/images/admin-menu-5.png');
+}
+
+
+/* amdin user */
+
+.admin-user {
+    margin-top: 0;
+    overflow: auto;
+}
+
+.admin-user-wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+a.admin-user-edit {
+    margin-right: 20px;
+}
+
+a.admin-user-delete {
+    color: #f30;
+}
+
+a.admin-user-edit:hover,
+a.admin-user-delete:hover {
+    cursor: pointer;
+}
+
+.page {
+    margin: 0 auto;
+}
+
+.user-manager {
+    padding: 10px 0;
+}
+
+
+/* admin hot */
+
+.admin-hot {
+    width: 1000px;
+    margin: 0 auto;
+}
+.admin-news {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.hot-manager {
+    padding: 10px 0;
+}
+.news-manager {
+    padding: 10px 0;
+}
+.admin-hot-wrap table {
+	max-width: 970px;
+	min-width: 970px;
+}
+.admin-news-wrap table {
+	max-width: 970px;
+	min-width: 970px;
+}
+.admin-hot-wrap table td {
+    max-width: 200px;
+    min-width: 60px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.admin-news-wrap table td {
+	max-width: 155px;
+    min-width: 60px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#newsForm textarea{
+	width:100%;
+}

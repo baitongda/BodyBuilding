@@ -1,17 +1,20 @@
+
 body{
 	padding-top: 50px;
+	padding-bottom: 65px;
+	position: relative;
+	font: 12px/1.5 "微软雅黑",Arial,Helvetica,Sans-Serif;
 }
 #footer{
 	width: 100%;
 	padding: 25px 50px 10px;
 	background: #ddd;
 	padding-left: 50px;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 }
 
 nav .user_header .img-circle{
-	
 	width: 30px;
 	height: 30px;
 	background: #ccc;
@@ -139,4 +142,107 @@ nav .header_user .user_info .triangle{
 }
 .right-bar-news li a{
 	color:#333;
+}
+
+/* news */
+ul.news-model{
+	list-style: none;
+}
+.news{
+	margin-top: 20px;
+}
+.news .news-top{
+	height: 32px;
+	line-height: 32px;
+}
+.news .news-top-header{
+	overflow: hidden;
+}
+.news .news-top-header a.news-top-name{
+	display: block;
+	overflow: hidden;
+	color:#333;
+}
+
+.news .news-top-header img{
+	border-radius: 16px;
+	margin-right: 10px;
+	float: left;
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+.news .news-top-header span.news-top-name{
+	margin-left: 10px;
+}
+.news .news-top-header span.news-top-date{
+	margin-left: 20px;
+	color:#bebdbd;
+	font-size: 12px;
+}
+.news .news-top-header span.news-top-date{
+	clear:both;
+}
+.news .news-top-right{
+	padding-right: 20px;
+}
+.news .news-top-right span{
+
+}
+.news .news-body{
+	height: 140px;
+	padding: 10px 0;
+	border-bottom: 1px solid #dcdddd;
+}
+.news span.news-top-fav{
+	text-indent: 40px;
+	display: inline-block;
+	height: 32px;
+	margin-left: 10px;
+	border-radius: 16px;
+	background: url('/images/google.png') no-repeat 0px 0px/32px 32px;
+}
+.news .news-top-fork{
+	text-indent: 40px;
+	margin-right: 10px;
+	display: inline-block;
+	height: 32px;
+	margin-left: 10px;
+	border-radius: 16px;
+	background: url('/images/google.png') no-repeat 0px 0px/32px 32px;
+}
+.news-body .news-left a{
+	overflow: hidden;
+	display: block;
+	width:220px;
+	height: 120px;
+}
+.news-body .news-left a img{
+	display: block;
+	width: 100%;
+}
+.news-right .news-right-title{
+	height: 36px;
+}
+.news-right .news-right-title a{
+	display: block;
+	font-size: 24px;
+	line-height: 36px;
+	color:#333;
+	text-decoration: none;
+	font-weight: bold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.news-right a.news-right-detail{
+	height: 64px;
+	font-size: 14px;
+	overflow: hidden;
+	color: #707070;
+	text-decoration: none;
+}
+.news-right .news-right-title a:hover,
+.news-right a.news-right-detail:hover{
+	color:rgb(255, 180, 0);
 }

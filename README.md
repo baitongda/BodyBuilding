@@ -283,4 +283,39 @@ $(function() {
     }
 });
 ```
+#### 渲染首页的新闻和热点
+`async`的流程控制
+```
+npm install saync
+```
+从数据库中获得文件
+```js
+// 并行执行多个函数, 传给结果数组的顺序为任务顺序, 而非任务完成先后的先后的顺序
+async.parallel({
+	hots: function(cb) {
+		Hot.find({}).limit(1).exec(function(err, doc) {
+			cb(err, doc);
+		});
+	},
+	news: function(cb) {
+		New.find({}).limit(1).exec(function(err, doc) {
+			cb(err, doc);
+		});
+	}
+}, function(err, results) {
+	if (err) return console.log(err);
+	res.render('index', {  //渲染页面
+		title: 'Index Page',
+		user: req.session.user,
+		hots: results.hots,
+		news: results.news
+	});
+});
+```
+格式化时间
+```
+span.news-top-date #{moment(item.date).format('YYYY-MM-DD')}
+```
+
+
 

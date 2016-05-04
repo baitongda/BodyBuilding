@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		title= title
+		block header
+			link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+			link(rel='stylesheet', href='/stylesheets/style.css')
+			link(rel='stylesheet', href='/stylesheets/alertify.core.css')
+			link(rel='stylesheet', href='/stylesheets/alertify.default.css')
+		script(text='javascript', src='/javascripts/jquery.min.js')
+		script(text='javascript', src='/javascripts/bootstrap.min.js')
+	body
+		block content
+		footer#footer
+			p.pull-right Copyright © Sun. 2016
+		script(text='javascript', src='/javascripts/jquery.min.js')
+		script(text='javascript', src='/javascripts/bootstrap.min.js')
+		script(text='javascript', src='/javascripts/alertify.min.js')
+
