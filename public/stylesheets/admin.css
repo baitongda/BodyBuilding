@@ -94,6 +94,8 @@ ul.header-dropdown-menu {
 ul.header-dropdown-menu a{
 		height: 26px;
 	line-height: 26px;
+    text-align: left;
+    text-indent: 20px;
 }
 
 ul.header-dropdown-menu li.dropdown-menu-list {
@@ -232,4 +234,21 @@ a.admin-user-delete:hover {
 }
 #newsForm textarea{
 	width:100%;
+}
+
+/* admin video */
+.video-manager{
+    padding: 10px 0;
+}
+.admin-video {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.admin-video-wrap table td {
+    max-width: 155px;
+    min-width: 60px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

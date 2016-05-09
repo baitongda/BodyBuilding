@@ -17,6 +17,7 @@
     "mongoose": "^4.4.13",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "supervisor": "^0.10.0"
+    "supervisor": "^0.10.0",
+    "video.js": "^5.9.2"
   }
 }

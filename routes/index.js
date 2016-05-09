@@ -4,18 +4,21 @@ var router = express.Router();
 var Index = require('../app/controllers/index');
 var User = require('../app/controllers/user');
 var Admin = require('../app/controllers/admin');
+var Video = require('../app/controllers/video');
 
 /* session */
 router.use(function (req,res,next) {
 	if(req.session.user){
-		//console.log(req.session.user);
+	
 	}
+
 	next();
 });
 
 /* GET home page. */
 router.get('/', Index.index);
 router.get('/index', Index.index);
+router.get('/video', Index.video);
 
 
 /* User */
@@ -29,6 +32,12 @@ router.get('/admin/user',Admin.user);
 router.get('/admin/index',Admin.index);
 router.get('/admin/hot',Admin.hots);
 router.get('/admin/news',Admin.news);
+router.get('/admin/video',Admin.video);
+
+
+/* Video page */
+router.get('/video/:id',Video.index);
+
 
 /* count */
 /*router.get('/', function(req, res) {
@@ -48,4 +57,5 @@ router.get('/admin/news',Admin.news);
     });
   });
 });*/
+
 module.exports = router;

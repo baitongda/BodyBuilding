@@ -1,0 +1,193 @@
+/* video */
+.container{
+	/* overflow: hidden; */
+}
+.ofh{
+	overflow: hidden;
+}
+.top-right{
+	width: 260px;
+	padding: 20px 10px;
+}
+.hot-ones{
+	overflow: hidden;
+	border-bottom: 2px solid #2fb3ff;
+	background: url('../images/good-ones.png') no-repeat 0px 8px;
+}
+
+.hot-ones > p.hot-ones-one{
+	font-size: 24px;
+	margin-left: 35px;
+	bottom:-7px;
+	color:#333;
+	height: 24px;
+	line-height: 24px;
+	position: relative;
+	cursor: pointer;
+	background: url('../images/more.png') no-repeat center center;
+}
+.hot-ones > p.hot-ones-one:hover{
+	color:#FF3C00;
+	background: url('../images/more-red.png') no-repeat center center;
+
+}
+
+.hot-ones-detail{
+	background: #F2F2F2;
+	margin-top: 20px;
+}
+.hot-ones-detail ul{
+	list-style: none;
+	padding-left: 0;
+	width: 100%;
+}
+
+.hot-ones-detail ul li a{
+	padding: 5px 0;
+	color:#333;
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+.hot-ones-detail ul li a:hover{
+	color: #2fb3ff;
+	text-decoration: none;
+}
+.hot-ones-detail .first a{
+	width: 100%;
+	border-bottom: none;
+}
+.hot-ones-detail li:not(:first-child){
+	text-indent: 12px;
+	background: url('../images/list-icon.png') no-repeat 5px 13px;
+}
+.hot-ones-detail li.first a{
+	padding-top: 0;
+}
+.hot-ones-detail .first img{
+	display: block;
+	width: 100%;
+}
+.hot-ones-detail li.second a{
+	border-bottom: 1px solid #ccc;
+}
+.main-body{
+	height: 200px;
+	width: 860px;
+	float: left;
+	margin-top: 20px;
+	padding-top: 5px 0px;
+}
+.recommend-header{
+	overflow: hidden;
+	border-bottom: 2px solid #2fb3ff;
+	background: url('../images/good-ones.png') no-repeat 0px 8px;
+}
+p.recommend-title{
+	padding-right: 50px;
+	font-size: 24px;
+	bottom:-7px;
+	margin-left: 35px;
+	color:#333;
+	height: 24px;
+	line-height: 24px;
+	position: relative;
+	cursor: pointer;
+	background: url('../images/more.png') no-repeat right center;
+}
+p.recommend-title:hover{
+	color:#FF3C00;
+	background: url('../images/more-red.png') no-repeat right center;
+}
+p.recommend-header-all{
+	position: relative;
+	top:13px;
+	cursor: pointer;
+	color:#00B7FF;
+}
+p.recommend-header-all:hover{
+	text-decoration: underline;
+}
+ul.recommend-list{
+	list-style: none;
+	padding: 0;
+	display: block;	
+}
+ul.recommend-list li{
+	display: block;
+	text-decoration: none;
+	float: left;
+	width: 200px;
+	min-height: 150px;
+	margin-right: 20px;
+}
+ul.recommend-list li:nth-child(4n){
+	margin-right: 0;
+}
+ul.recommend-list li a{
+	display: block;
+}
+ul.recommend-list li a img{
+	display: block;
+	height: 110px;
+	width: 100%;
+}
+
+p.recommend-list-title ,
+p.recommend-list-detail{
+	margin-top: 5px;
+}
+p.recommend-list-detail{
+
+margin-bottom: 10px;
+}
+p.recommend-list-title a{
+	width: 100%;
+	text-decoration: none;
+	color:#333;
+	max-height: 39px;
+	overflow: hidden;
+}
+p.recommend-list-title a:hover,
+p.recommend-list-detail a:hover{
+	color:#FF3C00;
+}
+p.recommend-list-detail span{
+	color:#999;
+}
+p.recommend-list-detail span:first-child{
+	margin-right: 10px;
+}
+p.recommend-play-bg{
+	display: none;
+	position: absolute;
+	top:0;
+	width: 200px;
+	height: 110px;
+	left:0;
+	margin-bottom: 0;
+	border: none;
+	background: url('../images/play.png') no-repeat center center #000;
+	opacity: 0.4;
+}
+p.recommend-play-bg a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.recommend-img-wrap{
+	position: relative;
+}
+.recommend-img-wrap:hover p.recommend-play-bg{
+	display: block;
+}
+
+
+
+
+
+

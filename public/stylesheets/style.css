@@ -3,7 +3,7 @@ body{
 	padding-top: 50px;
 	padding-bottom: 65px;
 	position: relative;
-	font: 12px/1.5 "微软雅黑",Arial,Helvetica,Sans-Serif;
+	font: 14px/1.5 "微软雅黑",Arial,Helvetica,Sans-Serif;
 }
 #footer{
 	width: 100%;
@@ -246,3 +246,4 @@ ul.news-model{
 .news-right a.news-right-detail:hover{
 	color:rgb(255, 180, 0);
 }
+

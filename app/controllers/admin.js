@@ -25,3 +25,8 @@ exports.news = function (req,res) {
 		title:'后台管理-新闻管理'
 	});
 };
+exports.video = function (req,res) {
+	res.render('admin_video',{
+		title:'后台管理-视频管理'
+	});
+};

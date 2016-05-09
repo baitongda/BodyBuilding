@@ -27,4 +27,7 @@ block content
 					.menu-wrap
 
 	script(src='/javascripts/footer.js',type='text/javascript')
-	script(src='/javascripts/admin_index.js',type='text/javascript')
+	script(type='text/javascript').
+		$(function(){
+			$('.header-nav a[href="/admin"]').parent('li').addClass('active');
+		});

@@ -1,0 +1,175 @@
+extends ./common/layout
+append header
+	link(rel='stylesheet',href='/stylesheets/user_validate.css')
+	link(rel='stylesheet',href='/stylesheets/carousel.css')
+	link(rel='stylesheet',href='/stylesheets/video.css')
+block content
+	include ./common/nav
+	include ./common/signinModal
+	include ./common/signupModal
+	.container.ofh
+		.poster-main.J_Poster.pull-left(data-setting='{\
+	    "width":860,\
+	    "height":270,\
+	    "posterWidth":640,\
+	    "posterHeight":270,\
+	    "scale":0.8,\
+	    "speed":500,\
+	    "verticalAlign":"middle",\
+		"delay":4000\
+	    }')
+			.poster-btn.poster-btn-prev(onselectstart='return false')
+			.poster-btn.poster-btn-next(onselectstart='return false')
+			ul.poster-list
+				each item in tops	
+					li.poster-item
+						a(href='#{item.url}', title='#{item.title}')
+							img(src='#{item.poster}', alt='#{item.title}')
+		.top-right.pull-right
+			.hot-ones
+				p.hot-ones-one 站长推荐
+			.hot-ones-detail
+				ul
+					li.first
+						a(href="#"): img(src='/images/greg-plitt.jpg',alt='')
+					li.second: a(href="#") 水晶男孩6人合体献唱
+					li: a(href="#") 健身励志视频 - 致敬Greg Plitt（普利特格雷格）
+					li: a(href="#") Face Your Fears Greg Plitt Motivation|Bodybuild
+					li: a(href="#") Greg Plitt 026 - 用哑铃毁灭
+					li: a(href="#") 20＃Greg Plitt - 胸肩，速度耐力和力量锻炼预览
+
+			.hot-ones
+				p.hot-ones-one 本周热点
+			.hot-ones-detail
+				ul
+					li.first
+						a(href="#"): img(src='/images/greg-plitt.jpg',alt='')
+					li.second: a(href="#") 水晶男孩6人合体献唱
+					li: a(href="#") 健身励志视频 - 致敬Greg Plitt（普利特格雷格）
+					li: a(href="#") Face Your Fears Greg Plitt Motivation|Bodybuild
+					li: a(href="#") Greg Plitt 026 - 用哑铃毁灭
+					li: a(href="#") 20＃Greg Plitt - 胸肩，速度耐力和力量锻炼预览
+		.main-body
+			.recommend.ofh
+				.recommend-header
+					p.recommend-title.pull-left MFT28
+					p.recommend-header-all.pull-right
+				.recommend-main
+					ul.recommend-list
+						li
+							.recommend-img-wrap
+								a(href='#')
+									img(src='/images/greg-plitt.jpg',alt='')
+									p.recommend-play-bg
+							p.recommend-list-title 
+								a(href='#')「高清重发」Greg Plitt - 把握你的成功｜健身励志
+							p.recommend-list-detail
+								span
+									font 1,222
+									|次播放
+								span
+									font 122
+									|次评论
+						li
+							.recommend-img-wrap
+								a(href='#')
+									img(src='/images/greg-plitt.jpg',alt='')
+									p.recommend-play-bg
+							p.recommend-list-title 
+								a(href='#')「高清重发」Greg Plitt - 把握你的成功｜健身励志
+							p.recommend-list-detail
+								span
+									font 1,222
+									|次播放
+								span
+									font 122
+									|次评论
+						li
+							.recommend-img-wrap
+								a(href='#')
+									img(src='/images/greg-plitt.jpg',alt='')
+									p.recommend-play-bg
+							p.recommend-list-title 
+								a(href='#')「高清重发」Greg Plitt - 把握你的成功｜健身励志
+							p.recommend-list-detail
+								span
+									font 1,222
+									|次播放
+								span
+									font 122
+									|次评论
+						li
+							.recommend-img-wrap
+								a(href='#')
+									img(src='/images/greg-plitt.jpg',alt='')
+									p.recommend-play-bg
+							p.recommend-list-title 
+								a(href='#')「高清重发」Greg Plitt - 把握你的成功｜健身励志
+							p.recommend-list-detail
+								span
+									font 1,222
+									|次播放
+								span
+									font 122
+									|次评论
+						li
+							.recommend-img-wrap
+								a(href='#')
+									img(src='/images/greg-plitt.jpg',alt='')
+									p.recommend-play-bg
+							p.recommend-list-title 
+								a(href='#')「高清重发」Greg Plitt - 把握你的成功｜健身励志
+							p.recommend-list-detail
+								span
+									font 1,222
+									|次播放
+								span
+									font 122
+									|次评论
+						li
+							.recommend-img-wrap
+								a(href='#')
+									img(src='/images/greg-plitt.jpg',alt='')
+									p.recommend-play-bg
+							p.recommend-list-title 
+								a(href='#')「高清重发」Greg Plitt - 把握你的成功｜健身励志
+							p.recommend-list-detail
+								span
+									font 1,222
+									|次播放
+								span
+									font 122
+									|次评论
+							
+						
+			.recommend.ofh
+				.recommend-header
+					p.recommend-title.pull-left BB.COM训练视频
+					p.recommend-header-all.pull-right
+				.recommend-main
+					ul.recommend-list
+						li
+							.recommend-img-wrap
+								a(href='#')
+									img(src='/images/greg-plitt.jpg',alt='')
+									p.recommend-play-bg
+							p.recommend-list-title 
+								a(href='#')「高清重发」Greg Plitt - 把握你的成功｜健身励志
+							p.recommend-list-detail
+								span
+									font 1,222
+									|次播放
+								span
+									font 122
+									|次评论
+						
+
+	script(src='/javascripts/carousel.js',type='text/javascript')
+	script(src="/javascripts/jquery.validate.js",type='text/javascript')
+	script(src='/javascripts/user_validate.js',type='text/javascript')
+	script(src='/javascripts/video.js',type='text/javascript')
+	script(text='text/javascript').
+		$(function(){
+			$('.nav_video').addClass('active').siblings('li').removeClass('active');
+			Carousel.init($('.J_Poster'));
+		});
